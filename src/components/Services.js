@@ -26,24 +26,24 @@ export default class Services extends Component {
                 info: 'Lorem ipsum get to know theis guy, they heloo ejwewjk wejkew!'
             }
         ]
-    }
+    };
 
     render() {
         return (
             <section className="services">
                 <Title title='services' />
                 <div className="services-center">
-                {
-                    this.state.services.map((item, index) => {
-                        return (
-                            <article key={index} className="service">
-                                <span>{item.icon}</span>
-                                <h6>{item.title}</h6>
-                                <p>{item.info}</p>
-                            </article>
-                        );
-                    })
-                }
+                    {
+                        this.state.services.map((item, index) => {
+                            return (
+                                <article key={index} className="service">
+                                    <span>{item.icon}</span>
+                                    <h6>{item.title}</h6>
+                                    <p>{item.info}</p>
+                                </article>
+                            );
+                        })
+                    }
                 </div>
             </section>
         )
