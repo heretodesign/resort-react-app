@@ -1,15 +1,14 @@
 import styled from 'styled-components'
+import defaultImg from '../images/room-1.jpeg';
 
-const SimpleButton = styled.button`
-  /* Adapt the colors based on primary prop */
-  background: ${props => props.primary ? "palevioletred" : "white"};
-  color: ${props => props.primary ? "white" : "palevioletred"};
 
-  font-size: 1em;
-  margin: 1em;
-  padding: 0.25em 1em;
-  border: 2px solid palevioletred;
-  border-radius: 3px;
+const StyledHero = styled.header`
+  min-height: 60vh;
+  background: url(${props => (props.img ? props.img : defaultImg)}) center/cover no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
 `;
 
-export default SimpleButton;
+export default StyledHero;
